@@ -120,25 +120,7 @@ function setupAutocomplete() {
 
 // Función para resaltar el municipio seleccionado
 function highlightMunicipality(name) {
-    // Resetear todos los municipios
-    document.querySelectorAll('#map-box svg a path, #map-box svg a polygon').forEach(el => {
-        el.style.fill = '#500b96';
-    });
-    
-    // Resaltar el municipio seleccionado
-    //cambiarColor(name)
-    /*const municipalityLink = document.querySelector(`#map-box svg a[xlink\\:title="${name}"]`);
-    console.log("resalatador", municipalityLink,name)
-    if (municipalityLink) {
-        const shape = municipalityLink.querySelector('path, polygon');
-        if (shape) {
-            shape.style.fill = '#red';
-        }
-    }*/
-}
-/*
-let poligonoSeleccionado = null;
-function cambiarColor(nombre) {
+    let poligonoSeleccionado = null;
     // Selecciona todos los elementos <a> dentro del SVG
     const enlaces = document.querySelectorAll('#map-box svg a');
     
@@ -147,20 +129,14 @@ function cambiarColor(nombre) {
         const titulo = enlace.getAttribute('xlink:title');
         const poligono = enlace.querySelector('polygon, path'); // Selecciona el polígono o el path dentro del enlace
 
-        if (titulo === nombre) {
+        if (titulo === name) {
             // Cambia el color del polígono seleccionado
-            poligono.setAttribute('fill', '#ff0000'); // Cambia a rojo o el color que prefieras
-
-            // Restaura el color del polígono previamente seleccionado
-            if (poligonoSeleccionado && poligonoSeleccionado !== poligono) {
-                poligonoSeleccionado.setAttribute('fill', '#500b96'); // Color original
-            }
-
-            // Actualiza el polígono seleccionado
-            poligonoSeleccionado = poligono;
+            poligono.setAttribute('fill', '#503bff'); // Cambia a rojo o el color que prefieras
+        } else {
+            poligono.setAttribute('fill', '#500b96'); // Cambia
         }
     });
-}*/
+}
 
 // Configurar los eventos de clic en el mapa
 function setupMapInteractions() {
