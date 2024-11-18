@@ -68,7 +68,7 @@ function displayMunicipalityData(municipalityName) {
             <span>IPM:</span> ${data.hectareasCana}
         </div>
         <div class="data-item">
-            <span>Desempeño industrial:</span> ${data.hectareasCafe}
+            <span>Desempeño institucional:</span> ${data.hectareasCafe}
         </div>
     `;
 }

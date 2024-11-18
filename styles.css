@@ -33,7 +33,7 @@ body {
     width: 100%;
     padding: 12px;
     font-size: 16px;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(#333333);
     border-radius: 8px;
     outline: none;
 }
