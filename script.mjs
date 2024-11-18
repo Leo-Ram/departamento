@@ -1,24 +1,24 @@
 // Datos simulados para los municipios
-console.log("salu3")
+//console.log("salu3")
 
 const municipalityData = {
     "La Unión": {
         hectareasSembradas: 1204.3,
         hectareasSinCultivar: 302.5,
         hectareasCana: 805.7,
-        hectareasCafe: 398.6
+        hectareasCafe: 56.6
     },
     "Funes": {
         hectareasSembradas: 892.4,
         hectareasSinCultivar: 245.8,
         hectareasCana: 567.3,
-        hectareasCafe: 324.1
+        hectareasCafe: 60.1
     },
     "Córdoba": {
         hectareasSembradas: 1567.2,
         hectareasSinCultivar: 423.9,
         hectareasCana: 978.4,
-        hectareasCafe: 588.8
+        hectareasCafe: 30.8
     }
 };
 
@@ -27,8 +27,8 @@ function generateRandomData() {
     return {
         hectareasSembradas: (Math.random() * 1500 + 500).toFixed(1),
         hectareasSinCultivar: (Math.random() * 400 + 100).toFixed(1),
-        hectareasCana: (Math.random() * 1000 + 300).toFixed(1),
-        hectareasCafe: (Math.random() * 600 + 200).toFixed(1)
+        hectareasCana: (Math.random() * 70 + 30).toFixed(1),
+        hectareasCafe: (Math.random() * 80 + 20).toFixed(1)
     };
 }
 
@@ -59,16 +59,16 @@ function displayMunicipalityData(municipalityName) {
     dataContainer.innerHTML = `
         <h2>${municipalityName}</h2>
         <div class="data-item">
-            <span>Hectáreas Sembradas:</span> ${data.hectareasSembradas}
+            <span>Población total:</span> ${data.hectareasSembradas}
         </div>
         <div class="data-item">
-            <span>Hectáreas Sin Cultivar:</span> ${data.hectareasSinCultivar}
+            <span>Area[Km]:</span> ${data.hectareasSinCultivar}
         </div>
         <div class="data-item">
-            <span>Hectáreas de Caña:</span> ${data.hectareasCana}
+            <span>IPM:</span> ${data.hectareasCana}
         </div>
         <div class="data-item">
-            <span>Hectáreas de Café:</span> ${data.hectareasCafe}
+            <span>Desempeño industrial:</span> ${data.hectareasCafe}
         </div>
     `;
 }
@@ -131,9 +131,9 @@ function highlightMunicipality(name) {
 
         if (titulo === name) {
             // Cambia el color del polígono seleccionado
-            poligono.setAttribute('fill', '#503bff'); // Cambia a rojo o el color que prefieras
+            poligono.setAttribute('fill', '#e7ee0e'); // Cambia  color que prefieras
         } else {
-            poligono.setAttribute('fill', '#500b96'); // Cambia
+            poligono.setAttribute('fill', "#179513"); // Cambia
         }
     });
 }
